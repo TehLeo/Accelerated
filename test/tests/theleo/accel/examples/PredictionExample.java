@@ -26,12 +26,15 @@
  */
 package tests.theleo.accel.examples;
 
+import com.jme3.math.Vector3f;
 import theleo.accel.Accelerated;
 import theleo.accel.Results;
+import theleo.accel.jme3.A;
 import theleo.accel.shapes.SphereShape;
 
 /**
- *
+ * Example of predicting collision between arbitrary pairs of objects.
+ * 
  * @author Juraj Papp
  */
 public class PredictionExample {
@@ -53,6 +56,9 @@ public class PredictionExample {
         }
         else {
             System.out.println("Objects collide at " + res.toString());
+            Vector3f arrowPosition = new Vector3f();
+            A.glPosAt(arrow, res.time[0], arrowPosition);
+            System.out.println("Position: " + arrowPosition);
         }
     }
 }
