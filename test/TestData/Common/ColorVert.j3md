@@ -1,0 +1,11 @@
+MaterialDef Terrain {
+    MaterialParameters {
+    }
+    Technique {
+        VertexShader GLSL100: TestData/Common/ColorVert.vert
+        FragmentShader GLSL100: TestData/Common/ColorVert.frag
+        WorldParameters {
+            WorldViewProjectionMatrix
+        }
+    }
+}
